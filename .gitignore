@@ -1,2 +1,3 @@
 node_modules
 *.vsix
+push-to-vscode.ps1

@@ -1,9 +1,9 @@
 {
-    "name": "space-purple",
-    "displayName": "Space Purple",
-    "description": "Yet another purple theme to satisfy myself (and maybe you too!). More to come in the future (currently working on a Light version). Feel free to send suggestions through my email/github. Stay drippy ☔",
+    "name": "cyberspace-purple-drip",
+    "displayName": "Cyberspace Purple Drip",
+    "description": "Cyberspace Purple Drip — a personal fork of zzAIMoo's Space Purple, tuned to be more germane to my needs. Dark + Light. Stay drippy ☔",
     "version": "0.11.0",
-    "publisher": "zzaimoo",
+    "publisher": "driphacker",
     "engines": {
         "vscode": "^1.15.0"
     },
@@ -13,6 +13,13 @@
         "email": "simone.sechi24@gmail.com",
         "url": "https://github.com/zzAIMoo"
     },
+    "contributors": [
+        {
+            "name": "DripHacker",
+            "email": "driphacker@protonmail.me",
+            "url": "https://github.com/DripHacker"
+        }
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/zzAIMoo/space-purple-theme.git"
@@ -21,6 +28,8 @@
         "Themes"
     ],
     "keywords": [
+        "Cyberspace Purple Drip",
+        "Drip",
         "Purple Space",
         "Light Theme",
         "Dark Theme",
@@ -34,14 +43,14 @@
     "contributes": {
         "themes": [
             {
-                "label": "Space Purple Dark",
+                "label": "Cyberspace Purple Drip Dark",
                 "uiTheme": "vs-dark",
-                "path": "./themes/space-purple-color-theme-dark.json"
+                "path": "./themes/cyberspace-purple-drip-color-theme-dark.json"
             },
             {
-                "label": "Space Purple Light",
+                "label": "Cyberspace Purple Drip Light",
                 "uiTheme": "vs",
-                "path": "./themes/space-purple-color-theme-light.json"
+                "path": "./themes/cyberspace-purple-drip-color-theme-light.json"
             }
         ]
     }
