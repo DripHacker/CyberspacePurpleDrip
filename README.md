@@ -40,6 +40,20 @@
 > active → Cosmic Canvas, inactive → Nebula Surface, plus recolored tabs). The
 > **Light Mode** shots are from the original Space Purple repository.
 
+## Get the full look
+
+The screenshots lean on two things that are **not** part of this theme and are **not**
+installed with it — grab them yourself if you want a 1:1 match:
+
+- **Icons:** [Bearded Icons](https://marketplace.visualstudio.com/items?itemName=BeardedBear.beardedicons)
+  by [BeardedBear](https://github.com/BeardedBear/bearded-icons) — the file icons you see.
+- **Font:** [Cartograph CF](https://connary.com/fonts/cartograph/) by **Connary Fagen** — the
+  editor font (a paid typeface; the ligatures and cursive italics come from it).
+
+Cyberspace Purple Drip ships **only the colors**. The icon theme and the font are the work
+of their respective creators — full credit to them — and must be installed / purchased from
+the links above. They do **not** come with this download.
+
 ## Credits
 
 **Space Purple** — the original theme, and essentially all of the work — by **zzAIMoo**:
