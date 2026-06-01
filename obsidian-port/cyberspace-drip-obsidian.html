@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyberspace Purple Drip → Obsidian · Port Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* Cyberspace Purple Drip — Obsidian port map. Same cosmic skin as the VS Code map. */
+  :root{
+    --bg-space:#1f152a; --bg-editor:#3b205a; --bg-surface:#2f1849; --bg-sidebar:#361b54;
+    --lilac:#c895df; --royal:#8743a5; --royal-hi:#be60e8; --teal:#23655f;
+    --fg:#e9d6f5; --fg-dim:#b59bcb; --fg-faint:#8d75a6;
+    --line:#c895df2e; --line-strong:#c895df55;
+    --s-keyword:#d561c3; --s-func:#AA52D9; --s-tag:#f55b7f; --s-class:#ffa600;
+    --s-const:#e8a96d; --s-method:#a2d952; --s-string:#61EA5F; --s-comment:#5ed59d;
+    --s-op:#7e9fde; --s-lav:#dfb8f0; --s-white:#ffffff;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Sora',system-ui,sans-serif;color:var(--fg);background:var(--bg-space);
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .stars{position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:
+      radial-gradient(ellipse 80% 60% at 75% -10%, #6A387B66 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 10% 110%, #23655f44 0%, transparent 60%),
+      linear-gradient(180deg,#1f152a 0%,#2a1640 50%,#1f152a 100%)}
+  .stars::before,.stars::after{content:"";position:absolute;inset:0;background-repeat:repeat;
+    background-image:
+      radial-gradient(1.5px 1.5px at 20px 30px,#ffffffcc,transparent),
+      radial-gradient(1px 1px at 130px 80px,#c895dfaa,transparent),
+      radial-gradient(1.5px 1.5px at 250px 160px,#ffffff99,transparent),
+      radial-gradient(1px 1px at 340px 40px,#dfb8f0aa,transparent),
+      radial-gradient(1.5px 1.5px at 420px 220px,#ffffffbb,transparent);
+    background-size:480px 320px;opacity:.5;animation:tw 6s ease-in-out infinite}
+  .stars::after{background-size:560px 380px;background-position:200px 100px;animation-delay:-3s;opacity:.3}
+  @keyframes tw{0%,100%{opacity:.5}50%{opacity:.22}}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  nav{position:sticky;top:0;z-index:50;background:#1f152acc;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:8px;height:60px;flex-wrap:wrap}
+  nav .brand{font-family:'Syne';font-weight:800;font-size:1.02rem;color:var(--lilac);margin-right:auto;display:flex;align-items:center;gap:9px}
+  nav .brand .orb{width:14px;height:14px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%,#fff,var(--lilac) 45%,var(--royal) 100%);box-shadow:0 0 12px var(--lilac)}
+  nav a{color:var(--fg-dim);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:7px;transition:.2s;font-weight:500}
+  nav a:hover{color:var(--fg);background:#c895df1a}
+
+  header{padding:90px 0 60px;text-align:center}
+  .eyebrow{font-family:'JetBrains Mono';font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--lilac);margin-bottom:20px;opacity:.85}
+  h1{font-family:'Syne';font-weight:800;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.04;letter-spacing:-1.5px;padding:.06em 0;
+    background:linear-gradient(115deg,#fff,var(--lilac) 42%,var(--s-tag) 78%,var(--s-class));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:20px}
+  header .sub{max-width:680px;margin:0 auto 26px;color:var(--fg-dim);font-size:1.05rem;font-weight:300}
+  .pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .pill{font-family:'JetBrains Mono';font-size:.72rem;padding:7px 13px;border-radius:999px;border:1px solid var(--line-strong);background:#c895df12;color:var(--fg-dim)}
+  .pill b{color:var(--lilac);font-weight:500}
+
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:15px;margin-bottom:32px;flex-wrap:wrap}
+  .sec-num{font-family:'JetBrains Mono';font-size:.78rem;color:var(--royal-hi);border:1px solid var(--line-strong);border-radius:6px;padding:3px 9px}
+  h2{font-family:'Syne';font-weight:700;font-size:clamp(1.7rem,3.6vw,2.5rem);letter-spacing:-1px;color:#fff}
+  .sec-head p{flex-basis:100%;color:var(--fg-faint);font-size:.94rem;font-weight:300;max-width:720px}
+
+  .grid{display:grid;gap:16px}
+  .cols-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{background:linear-gradient(160deg,#2f1849,#291541);border:1px solid var(--line);border-radius:15px;padding:22px;transition:.25s}
+  .card:hover{border-color:var(--line-strong);transform:translateY(-3px)}
+  .card h3{font-family:'Syne';font-weight:600;font-size:1.08rem;color:#fff;margin-bottom:8px;display:flex;gap:9px;align-items:center}
+  .card p{color:var(--fg-dim);font-size:.88rem;font-weight:300}
+  .card code,.ic{font-family:'JetBrains Mono';font-size:.8rem;color:var(--lilac);background:#c895df14;padding:1px 6px;border-radius:5px}
+
+  .layers{display:grid;gap:12px}
+  .layer{display:grid;grid-template-columns:50px 1fr;gap:18px;align-items:center;background:#2f184980;border:1px solid var(--line);border-radius:13px;padding:18px 20px;border-left:4px solid var(--accent)}
+  .layer .b{font-family:'JetBrains Mono';font-weight:700;font-size:1.3rem;color:var(--accent);text-align:center}
+  .layer h4{font-family:'Syne';font-weight:600;font-size:1rem;color:#fff;margin-bottom:3px}
+  .layer h4 span{font-family:'JetBrains Mono';font-size:.72rem;color:var(--fg-faint);font-weight:400;margin-left:8px}
+  .layer p{font-size:.86rem;color:var(--fg-dim);font-weight:300}
+
+  /* mapping rows */
+  .map-group{margin-bottom:34px}
+  .map-group>h3{font-family:'Syne';font-weight:600;font-size:1.18rem;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:11px}
+  .map-group>h3 .t{font-family:'JetBrains Mono';font-size:.64rem;font-weight:400;color:var(--fg-faint);border:1px solid var(--line);border-radius:5px;padding:2px 7px}
+  .map-group>.n{color:var(--fg-faint);font-size:.84rem;font-weight:300;margin-bottom:16px}
+  .rows{display:grid;gap:8px}
+  .mrow{display:grid;grid-template-columns:minmax(160px,260px) 200px 1fr;gap:14px;align-items:center;
+    background:#2f184988;border:1px solid var(--line);border-radius:10px;padding:11px 16px;transition:.18s}
+  .mrow:hover{border-color:var(--line-strong)}
+  .mrow .var{font-family:'JetBrains Mono';font-size:.8rem;color:var(--s-op);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mrow .col{display:flex;align-items:center;gap:9px;cursor:pointer}
+  .mrow .chip{width:26px;height:26px;border-radius:7px;border:1px solid #ffffff22;flex-shrink:0;position:relative}
+  .mrow .chip::after{content:"⧉";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#000;opacity:0;font-size:.85rem;transition:.2s}
+  .mrow .col:hover .chip::after{opacity:.5}
+  .mrow .col.copied .chip::after{content:"✓";opacity:.9}
+  .mrow .hx{font-family:'JetBrains Mono';font-size:.74rem;color:var(--lilac)}
+  .mrow .hx small{display:block;color:var(--fg-faint);font-size:.68rem}
+  .mrow .role{color:var(--fg-dim);font-size:.84rem;font-weight:300}
+  @media(max-width:720px){ .mrow{grid-template-columns:1fr 1fr;gap:8px} .mrow .role{grid-column:1/-1} }
+
+  pre{font-family:'JetBrains Mono';font-size:.78rem;line-height:1.7;background:linear-gradient(160deg,#241139,#1c0e2f);
+    border:1px solid var(--line);border-radius:14px;padding:20px 22px;overflow-x:auto;color:var(--fg-dim);margin-top:8px}
+  pre .k{color:var(--s-keyword)} pre .s{color:var(--s-string)} pre .c{color:var(--s-comment);font-style:italic}
+  pre .v{color:var(--s-op)} pre .p{color:var(--lilac)} pre .n{color:var(--s-const)}
+
+  .check{display:grid;gap:10px}
+  .ci{display:flex;gap:13px;align-items:flex-start;background:#2f184966;border:1px solid var(--line);border-radius:11px;padding:14px 18px}
+  .ci .x{color:var(--s-method);font-family:'JetBrains Mono';font-weight:700;flex-shrink:0}
+  .ci div b{color:#fff;font-family:'Syne';font-weight:600;font-size:.96rem}
+  .ci div p{color:var(--fg-dim);font-size:.85rem;font-weight:300;margin-top:2px}
+
+  footer{padding:56px 0 80px;text-align:center;border-top:1px solid var(--line);color:var(--fg-faint)}
+  footer .orb{width:32px;height:32px;border-radius:50%;margin:0 auto 16px;background:radial-gradient(circle at 30% 30%,#fff,var(--lilac) 45%,var(--royal));box-shadow:0 0 24px var(--lilac)}
+  footer a{color:var(--lilac);text-decoration:none}
+  footer .small{font-size:.76rem;margin-top:8px;font-family:'JetBrains Mono'}
+  .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--royal);color:#fff;padding:10px 20px;border-radius:10px;font-family:'JetBrains Mono';font-size:.8rem;transition:.3s;z-index:99}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+
+<nav><div class="wrap">
+  <span class="brand"><span class="orb"></span>Drip&nbsp;→&nbsp;Obsidian</span>
+  <a href="#how">How it works</a>
+  <a href="#core">Core map</a>
+  <a href="#md">Markdown &amp; code</a>
+  <a href="#ss">Style Settings</a>
+  <a href="#build">Build plan</a>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="eyebrow">Theme port map · dark-first · Style Settings ready</div>
+  <h1>Cyberspace Purple Drip<br>→ Obsidian</h1>
+  <p class="sub">A blueprint for porting the <strong>Cyberspace Purple Drip</strong> dark palette from VS Code to an
+     <strong>Obsidian.md</strong> theme — every color mapped to an Obsidian CSS variable, wired for the
+     <strong>Style Settings</strong> plugin. Pair this page with <code class="ic">BUILD-PROMPT.md</code> and hand both to Claude to generate the theme.</p>
+  <div class="pills">
+    <span class="pill">target · <b>Obsidian 1.x</b></span>
+    <span class="pill">output · <b>theme.css + manifest.json</b></span>
+    <span class="pill">plugin · <b>Style Settings</b></span>
+    <span class="pill">source · <b>…-dark.json</b></span>
+  </div>
+</div></header>
+
+<!-- HOW -->
+<section id="how"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">01</span><h2>How an Obsidian theme works</h2>
+    <p>Unlike VS Code's JSON, an Obsidian theme is <em>CSS</em>. You override Obsidian's built-in CSS custom properties — the same variables the default theme uses — so the app repaints. Four moving parts:</p></div>
+  <div class="layers">
+    <div class="layer" style="--accent:var(--lilac)"><div class="b">1</div><div>
+      <h4><code class="ic">theme.css</code> <span>the whole theme</span></h4>
+      <p>One stylesheet. Define color variables under <code class="ic">.theme-dark</code> (and optionally <code class="ic">.theme-light</code>), plus any selector overrides. This is where the entire palette lives.</p></div></div>
+    <div class="layer" style="--accent:var(--s-class)"><div class="b">2</div><div>
+      <h4><code class="ic">manifest.json</code> <span>metadata</span></h4>
+      <p>Name, version, author, <code class="ic">minAppVersion</code>. Lives beside theme.css in <code class="ic">.obsidian/themes/Cyberspace Purple Drip/</code>.</p></div></div>
+    <div class="layer" style="--accent:var(--s-method)"><div class="b">3</div><div>
+      <h4>CSS variables <span>the contract</span></h4>
+      <p>Obsidian exposes ~hundreds of <code class="ic">--background-*</code>, <code class="ic">--text-*</code>, <code class="ic">--code-*</code>, <code class="ic">--h1-color</code>… vars. Set them and the UI follows. No need to fight selectors for most things.</p></div></div>
+    <div class="layer" style="--accent:var(--s-tag)"><div class="b">4</div><div>
+      <h4>Style Settings block <span>user controls</span></h4>
+      <p>A <code class="ic">/* @settings */</code> YAML comment turns chosen variables into a live settings UI (color pickers, toggles, sliders) via the Style Settings community plugin.</p></div></div>
+  </div>
+</div></section>
+
+<!-- CORE MAP -->
+<section id="core"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">02</span><h2>Core palette → Obsidian variables</h2>
+    <p>The dark workbench colors mapped to Obsidian's foundation. Click any swatch to copy. The accent is given as <code class="ic">hsl-split</code> so Style Settings can drive Obsidian's whole accent system.</p></div>
+  <div id="core-map"></div>
+</div></section>
+
+<!-- MARKDOWN & CODE -->
+<section id="md"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">03</span><h2>Markdown &amp; code highlighting</h2>
+    <p>This is where the syntax rainbow earns its keep — headings, code fences, links, bold/italic and callouts reuse the exact token colors from the VS Code theme.</p></div>
+  <div id="md-map"></div>
+</div></section>
+
+<!-- STYLE SETTINGS -->
+<section id="ss"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">04</span><h2>Style Settings integration</h2>
+    <p>Style Settings reads a YAML block embedded in a CSS comment and builds a settings panel. We expose the accent, backgrounds, heading colors, code-token colors, and a few toggles. Exact shape:</p></div>
+  <pre><span class="c">/* @settings</span>
+
+<span class="p">name:</span> <span class="s">Cyberspace Purple Drip</span>
+<span class="p">id:</span> <span class="s">cyberspace-purple-drip</span>
+<span class="p">settings:</span>
+    <span class="v">-</span>
+        <span class="p">id:</span> cpd-accent-heading
+        <span class="p">title:</span> <span class="s">Accent</span>
+        <span class="p">type:</span> heading
+        <span class="p">level:</span> <span class="n">2</span>
+    <span class="v">-</span>
+        <span class="p">id:</span> accent       <span class="c"># drives --accent-h / -s / -l</span>
+        <span class="p">title:</span> <span class="s">Accent color</span>
+        <span class="p">type:</span> variable-color
+        <span class="p">format:</span> hsl-split
+        <span class="p">default:</span> <span class="s">'#c895df'</span>
+    <span class="v">-</span>
+        <span class="p">id:</span> cpd-bg
+        <span class="p">title:</span> <span class="s">Editor background</span>
+        <span class="p">type:</span> variable-color
+        <span class="p">format:</span> hex
+        <span class="p">opacity:</span> <span class="k">false</span>
+        <span class="p">default:</span> <span class="s">'#3b205a'</span>
+    <span class="v">-</span>
+        <span class="p">id:</span> cpd-rainbow-headings
+        <span class="p">title:</span> <span class="s">Rainbow headings</span>
+        <span class="p">description:</span> <span class="s">Color h1–h6 across the drip palette</span>
+        <span class="p">type:</span> class-toggle
+        <span class="p">default:</span> <span class="k">true</span>
+
+<span class="c">*/</span></pre>
+  <div class="grid cols-3" style="margin-top:22px">
+    <div class="card"><h3>🎨 Accent</h3><p><code>hsl-split</code> on <code>--accent</code> → Obsidian rebuilds <code>--interactive-accent</code>, link colors and more from your one pick.</p></div>
+    <div class="card"><h3>🌈 Toggles</h3><p><code>class-toggle</code> for rainbow headings, italic comments, and a "drippy" tab/active glow — body classes the CSS keys off.</p></div>
+    <div class="card"><h3>🧩 Token colors</h3><p>Each <code>--code-*</code> token exposed as a <code>variable-color</code> so power users can retune the syntax rainbow live.</p></div>
+  </div>
+</div></section>
+
+<!-- BUILD PLAN -->
+<section id="build"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">05</span><h2>Build checklist (the handoff)</h2>
+    <p>What the build Claude must produce. Feed it <code class="ic">BUILD-PROMPT.md</code> + this page; these are the acceptance criteria.</p></div>
+  <div class="check">
+    <div class="ci"><span class="x">01</span><div><b>manifest.json</b><p>name "Cyberspace Purple Drip", author "DripHacker", a version, <code class="ic">minAppVersion</code>, and a one-line description noting it's a port of zzAIMoo's Space Purple.</p></div></div>
+    <div class="ci"><span class="x">02</span><div><b>theme.css with the full dark palette</b><p>All core variables from §2 set under <code class="ic">.theme-dark</code>; markdown/code vars from §3. Dark-first (a Light pass is optional/secondary).</p></div></div>
+    <div class="ci"><span class="x">03</span><div><b>A working <code class="ic">/* @settings */</code> block</b><p>Accent (hsl-split), key backgrounds, heading colors, every <code class="ic">--code-*</code> token, plus toggles — all with correct defaults from this map.</p></div></div>
+    <div class="ci"><span class="x">04</span><div><b>Code-block syntax coverage</b><p>Map the rainbow to both reading-view Prism (<code class="ic">--code-*</code>) and editor CodeMirror (<code class="ic">.cm-*</code>) so fenced code looks identical to VS Code.</p></div></div>
+    <div class="ci"><span class="x">05</span><div><b>README + install note</b><p>How to drop it in <code class="ic">.obsidian/themes/</code>, enable it, and install Style Settings for the controls. Credit zzAIMoo (origin) + the icon/font note from the VS Code repo.</p></div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="orb"></div>
+  <p>Port map for <strong>Cyberspace Purple Drip → Obsidian</strong> by <a href="https://github.com/DripHacker">DripHacker</a> — palette originally from <a href="https://github.com/zzAIMoo/space-purple-theme">Space Purple</a> by zzAIMoo.</p>
+  <p class="small">Click swatches to copy · pair with BUILD-PROMPT.md · ☔ stay drippy</p>
+</div></footer>
+<div class="toast" id="toast">copied!</div>
+
+<script>
+const CORE = [
+  { title:"Backgrounds & surfaces", tag:"--background-*", note:"From the void up to the note canvas.",
+    rows:[
+      ["--background-primary","#3b205a","Cosmic Canvas","Main note / editor background."],
+      ["--background-primary-alt","#361b54","Sidebar shade","Active line / alt panes."],
+      ["--background-secondary","#2f1849","Nebula Surface","Sidebars, file explorer, panels."],
+      ["--background-secondary-alt","#1f152a","Void","Title bar, ribbon, deepest chrome."],
+      ["--background-modifier-border","#8743a5","Royal","Borders, dividers, input outlines."],
+      ["--background-modifier-hover","#9c60b8","List Hover","Hovered list / nav items."],
+    ]},
+  { title:"Accent system", tag:"--accent-h/s/l", note:"One lilac drives Obsidian's whole accent engine (hsl ≈ 281°, 52%, 73%).",
+    rows:[
+      ["--accent (hsl-split)","#c895df","Signature Lilac","Sets --accent-h/-s/-l → interactive accent, active states."],
+      ["--interactive-accent","#8743a5","Royal","Buttons, toggles, primary actions."],
+      ["--interactive-accent-hover","#be60e8","Royal Hover","Hovered buttons / accents."],
+      ["--text-on-accent","#ffffff","White","Text sitting on accent fills."],
+    ]},
+  { title:"Text", tag:"--text-*", note:"Readable on the violet canvas.",
+    rows:[
+      ["--text-normal","#e9d6f5","Soft Lilac-White","Body text."],
+      ["--text-muted","#b59bcb","Muted","Secondary text, metadata."],
+      ["--text-faint","#8d75a6","Faint","Disabled / placeholder."],
+      ["--text-accent","#c895df","Signature Lilac","Internal links, accented text."],
+      ["--text-accent-hover","#be60e8","Royal Hover","Hovered links."],
+      ["--text-selection","#6A387B","Selection","Selected-text highlight."],
+    ]},
+];
+const MD = [
+  { title:"Headings (rainbow)", tag:"--h1-color … --h6-color", note:"Descending across the drip palette for instant hierarchy.",
+    rows:[
+      ["--h1-color","#f55b7f","Rose","# Heading 1"],
+      ["--h2-color","#ffa600","Amber","## Heading 2"],
+      ["--h3-color","#a2d952","Lime","### Heading 3"],
+      ["--h4-color","#5ed59d","Mint","#### Heading 4"],
+      ["--h5-color","#7e9fde","Periwinkle","##### Heading 5"],
+      ["--h6-color","#d561c3","Orchid","###### Heading 6"],
+    ]},
+  { title:"Code tokens", tag:"--code-* (Prism) + .cm-* (editor)", note:"The syntax rainbow, 1:1 with the VS Code theme.",
+    rows:[
+      ["--code-background","#2f1849","Nebula Surface","Fenced code block background."],
+      ["--code-normal","#ffffff","White","Default code text / variables."],
+      ["--code-comment","#5ed59d","Mint","Comments (italic)."],
+      ["--code-keyword","#d561c3","Orchid","Keywords, storage, control."],
+      ["--code-function","#AA52D9","Amethyst","Function & method names."],
+      ["--code-string","#61EA5F","Signal Green","Strings."],
+      ["--code-value","#e8a96d","Sand","Numbers, constants, values."],
+      ["--code-property","#f55b7f","Rose","Properties, tags, attributes."],
+      ["--code-operator","#7e9fde","Periwinkle","Operators."],
+      ["--code-important","#ffa600","Amber","Classes, types, important tokens."],
+    ]},
+  { title:"Inline markdown", tag:"links · emphasis · quotes · tags", note:"The little stuff that sells it.",
+    rows:[
+      ["--link-color / hover","#c895df","Signature Lilac","[[Wikilinks]] & external links."],
+      ["--bold-color","#e8a96d","Sand","**bold** text."],
+      ["--italic-color","#d561c3","Orchid","*italic* text."],
+      ["--blockquote-border-color","#c895df","Signature Lilac","> blockquote accent bar."],
+      ["--text-highlight-bg","#8743a5","Royal","==highlighted== text."],
+      ["--tag-color","#c895df","Signature Lilac","#tags."],
+    ]},
+];
+
+function group(g){
+  const rows=g.rows.map(([v,hex,name,role])=>`
+    <div class="mrow">
+      <span class="var">${v}</span>
+      <span class="col" data-hex="${hex}"><span class="chip" style="background:${hex}"></span>
+        <span class="hx">${hex}<small>${name}</small></span></span>
+      <span class="role">${role}</span>
+    </div>`).join('');
+  return `<div class="map-group"><h3>${g.title}<span class="t">${g.tag}</span></h3>
+    <div class="n">${g.note}</div><div class="rows">${rows}</div></div>`;
+}
+document.getElementById('core-map').innerHTML = CORE.map(group).join('');
+document.getElementById('md-map').innerHTML   = MD.map(group).join('');
+
+const toast=document.getElementById('toast');let t;
+document.addEventListener('click',e=>{
+  const c=e.target.closest('.col');if(!c)return;
+  const hex=c.dataset.hex;navigator.clipboard?.writeText(hex).catch(()=>{});
+  c.classList.add('copied');toast.textContent=hex+' copied';toast.classList.add('show');
+  clearTimeout(t);t=setTimeout(()=>{toast.classList.remove('show');c.classList.remove('copied')},1300);
+});
+</script>
+</body>
+</html>
