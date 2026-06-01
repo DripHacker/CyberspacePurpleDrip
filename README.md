@@ -15,11 +15,11 @@
 ## Dark Mode
 
 <p style="text-align: center;">
-    <img src="https://raw.githubusercontent.com/DripHacker/space-purple-theme/master/images/Dark%20Mode%20Tweaks%2000.png"/>
+    <img src="https://raw.githubusercontent.com/DripHacker/CyberspacePurpleDrip/master/images/Dark%20Mode%20Tweaks%2000.png"/>
 </p>
 <br>
 <p style="text-align: center;">
-    <img src="https://raw.githubusercontent.com/DripHacker/space-purple-theme/master/images/Dark%20Mode%20Tweaks%2001.png"/>
+    <img src="https://raw.githubusercontent.com/DripHacker/CyberspacePurpleDrip/master/images/Dark%20Mode%20Tweaks%2001.png"/>
 </p>
 
 ## Light Mode
