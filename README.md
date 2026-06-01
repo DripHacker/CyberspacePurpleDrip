@@ -15,15 +15,11 @@
 ## Dark Mode
 
 <p style="text-align: center;">
-    <img src="https://raw.githubusercontent.com/zzAIMoo/space-purple-theme/master/images/first.jpeg"/>
+    <img src="https://raw.githubusercontent.com/DripHacker/space-purple-theme/master/images/Dark%20Mode%20Tweaks%2000.png"/>
 </p>
 <br>
 <p style="text-align: center;">
-    <img src="https://raw.githubusercontent.com/zzAIMoo/space-purple-theme/master/images/second.jpeg"/>
-</p>
-<br>
-<p style="text-align: center;">
-    <img src="https://raw.githubusercontent.com/zzAIMoo/space-purple-theme/master/images/third.jpeg"/>
+    <img src="https://raw.githubusercontent.com/DripHacker/space-purple-theme/master/images/Dark%20Mode%20Tweaks%2001.png"/>
 </p>
 
 ## Light Mode
@@ -40,9 +36,9 @@
     <img src="https://raw.githubusercontent.com/zzAIMoo/space-purple-theme/master/images/third_light.jpeg"/>
 </p>
 
-> Screenshots above are from the original Space Purple repository and illustrate
-> the shared base look. The Dark variant in this fork additionally lightens the
-> title bar (active → Cosmic Canvas, inactive → Nebula Surface).
+> The **Dark Mode** shots above are from this fork (note the lightened title bar:
+> active → Cosmic Canvas, inactive → Nebula Surface, plus recolored tabs). The
+> **Light Mode** shots are from the original Space Purple repository.
 
 ## Credits
 
