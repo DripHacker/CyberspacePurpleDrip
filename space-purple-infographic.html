@@ -13,13 +13,13 @@
      Dark workbench tokens drive the whole document chrome.
      ============================================================ */
   :root{
-    --bg-space:    #1f152a;   /* title bar — deepest */
-    --bg-editor:   #3b205a;   /* editor background — main canvas */
-    --bg-surface:  #2f1849;   /* widgets / elevated cards */
-    --bg-sidebar:  #361b54;   /* sidebar */
+    --bg-space:    #150824;   /* abyss — deepest */
+    --bg-editor:   #4b006c;   /* editor background — main canvas */
+    --bg-surface:  #520075;   /* sidebar / elevated cards */
+    --bg-sidebar:  #520075;   /* sidebar */
     --bg-peek:     #150824;   /* peek gutter — near black */
     --lilac:       #c895df;   /* THE signature accent */
-    --royal:       #8743a5;   /* buttons / active selection */
+    --royal:       #7f00b8;   /* buttons / active selection */
     --royal-hi:    #be60e8;   /* button hover */
     --teal:        #23655f;   /* the odd-one-out accent */
     --fg:          #e9d6f5;
@@ -29,9 +29,9 @@
     --line-strong: #c895df55;
 
     /* dark syntax rainbow */
-    --s-keyword:#d561c3; --s-func:#AA52D9; --s-tag:#f55b7f; --s-class:#ffa600;
-    --s-const:#e8a96d; --s-method:#a2d952; --s-string:#61EA5F; --s-comment:#5ed59d;
-    --s-op:#7e9fde; --s-lav:#dfb8f0; --s-white:#ffffff; --s-err:#f44747;
+    --s-keyword:#e353cd; --s-func:#ca72ec; --s-tag:#f55b7f; --s-class:#f0a10f;
+    --s-const:#f5a960; --s-method:#a5ea41; --s-string:#57f455; --s-comment:#4fe49e;
+    --s-op:#729bea; --s-lav:#e2b1f7; --s-white:#ffffff; --s-err:#f44747;
     --s-ice:#B1E4EE; --s-cyan:#68BDCE;
 
     --maxw: 1180px;
@@ -53,14 +53,14 @@
     background:
       radial-gradient(ellipse 80% 60% at 75% -10%, #6A387B66 0%, transparent 60%),
       radial-gradient(ellipse 60% 50% at 10% 110%, #23655f44 0%, transparent 60%),
-      linear-gradient(180deg, #1f152a 0%, #2a1640 50%, #1f152a 100%);
+      linear-gradient(180deg, #150824 0%, #4b006c 50%, #150824 100%);
   }
   .stars::before,.stars::after{content:"";position:absolute;inset:0;
     background-image:
       radial-gradient(1.5px 1.5px at 20px 30px, #ffffffcc, transparent),
       radial-gradient(1px 1px at 130px 80px, #c895dfaa, transparent),
       radial-gradient(1.5px 1.5px at 250px 160px, #ffffff99, transparent),
-      radial-gradient(1px 1px at 340px 40px, #dfb8f0aa, transparent),
+      radial-gradient(1px 1px at 340px 40px, #e2b1f7aa, transparent),
       radial-gradient(1.5px 1.5px at 420px 220px, #ffffffbb, transparent),
       radial-gradient(1px 1px at 80px 280px, #c895df88, transparent);
     background-repeat:repeat;background-size:480px 320px;opacity:.55;
@@ -74,7 +74,7 @@
 
   /* ---- sticky nav ---- */
   nav{position:sticky;top:0;z-index:50;
-    background:#1f152acc;backdrop-filter:blur(12px);
+    background:#150824cc;backdrop-filter:blur(12px);
     border-bottom:1px solid var(--line);}
   nav .wrap{display:flex;align-items:center;gap:8px;height:60px;flex-wrap:wrap}
   nav .brand{font-family:'Syne';font-weight:800;font-size:1.05rem;
@@ -114,7 +114,7 @@
   .grid{display:grid;gap:18px}
   .cols-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
   .cols-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
-  .card{background:linear-gradient(160deg,#2f1849 0%,#291541 100%);
+  .card{background:linear-gradient(160deg,#520075 0%,#311b4b 100%);
     border:1px solid var(--line);border-radius:16px;padding:24px;
     transition:.25s;position:relative;overflow:hidden}
   .card:hover{border-color:var(--line-strong);transform:translateY(-3px);
@@ -129,7 +129,7 @@
   /* ---- anatomy layers ---- */
   .layers{display:grid;gap:14px}
   .layer{display:grid;grid-template-columns:54px 1fr;gap:20px;align-items:center;
-    background:#2f184980;border:1px solid var(--line);border-radius:14px;padding:20px 22px;
+    background:#52007580;border:1px solid var(--line);border-radius:14px;padding:20px 22px;
     border-left:4px solid var(--accent)}
   .layer .badge{font-family:'JetBrains Mono';font-weight:700;font-size:1.5rem;
     color:var(--accent);text-align:center}
@@ -139,7 +139,7 @@
 
   /* ---- file tree ---- */
   .tree{font-family:'JetBrains Mono';font-size:.86rem;
-    background:linear-gradient(160deg,#2f1849,#241139);
+    background:linear-gradient(160deg,#520075,#311b4b);
     border:1px solid var(--line);border-radius:16px;padding:10px 6px;overflow:hidden}
   .row{display:grid;grid-template-columns:minmax(230px,300px) 1fr;gap:14px;
     padding:9px 18px;border-radius:9px;align-items:baseline;transition:.18s}
@@ -187,7 +187,7 @@
   .pal-group > .gnote{color:var(--fg-faint);font-size:.85rem;font-weight:300;margin-bottom:20px}
   .swatches{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(310px,1fr))}
   .sw{display:grid;grid-template-columns:60px 1fr;gap:0;border:1px solid var(--line);
-    border-radius:12px;overflow:hidden;background:#2f184980;transition:.2s;cursor:pointer}
+    border-radius:12px;overflow:hidden;background:#52007580;transition:.2s;cursor:pointer}
   .sw:hover{border-color:var(--line-strong);transform:translateY(-2px)}
   .sw .chip{position:relative}
   .sw .chip::after{content:"⧉";position:absolute;inset:0;display:flex;align-items:center;
@@ -210,7 +210,7 @@
   /* ---- changes-in-this-build ---- */
   .changes{display:grid;gap:12px}
   .change{display:grid;grid-template-columns:210px 1fr;gap:18px;align-items:center;
-    background:linear-gradient(160deg,#2f1849,#241139);border:1px solid var(--line);
+    background:linear-gradient(160deg,#520075,#311b4b);border:1px solid var(--line);
     border-left:3px solid var(--royal-hi);border-radius:13px;padding:16px 20px}
   .change .what{font-family:'Syne';font-weight:600;color:#fff;font-size:.98rem}
   .change .what small{display:block;font-family:'JetBrains Mono';font-weight:400;
@@ -225,13 +225,13 @@
 
   /* ---- quirks ---- */
   .quirk{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:18px 20px;
-    background:#2f184966;border:1px solid var(--line);border-left:3px solid var(--s-class);
+    background:#52007566;border:1px solid var(--line);border-left:3px solid var(--s-class);
     border-radius:12px;margin-bottom:12px}
   .quirk .q{font-size:1.3rem}
   .quirk h4{font-family:'Syne';font-weight:600;color:#fff;font-size:1rem;margin-bottom:3px}
   .quirk p{color:var(--fg-dim);font-size:.87rem;font-weight:300}
   .quirk code{font-family:'JetBrains Mono';font-size:.8rem;color:var(--s-method);
-    background:#a2d9521a;padding:1px 6px;border-radius:4px}
+    background:#a5ea411a;padding:1px 6px;border-radius:4px}
 
   footer{padding:60px 0 80px;text-align:center;border-top:1px solid var(--line);color:var(--fg-faint)}
   footer .orb{width:34px;height:34px;border-radius:50%;margin:0 auto 18px;
@@ -301,16 +301,16 @@
         <div class="flow">
           <span class="tok"><i style="background:#1f152a"></i><code>Void #1f152a</code></span>
           <span class="arr">→</span>
-          <span class="tok to"><i style="background:#3b205a"></i><code>Cosmic Canvas #3b205a</code></span>
+          <span class="tok to"><i style="background:#4b006c"></i><code>Cosmic Canvas #4b006c</code></span>
         </div>
       </div>
 
       <div class="change">
         <div class="what">Inactive title bar<small>titleBar.inactiveBackground</small></div>
         <div class="flow">
-          <span class="tok"><i style="background:#3b205a"></i><code>Cosmic Canvas #3b205a</code></span>
+          <span class="tok"><i style="background:#3b205a"></i><code>old Cosmic Canvas #3b205a</code></span>
           <span class="arr">→</span>
-          <span class="tok to"><i style="background:#2f1849"></i><code>Nebula Surface #2f1849</code></span>
+          <span class="tok to"><i style="background:#4b006c"></i><code>Cosmic Canvas #4b006c</code></span>
         </div>
       </div>
 
@@ -319,7 +319,25 @@
         <div class="flow">
           <span class="tok"><i style="background:#2f1849"></i><code>Nebula Surface #2f1849</code></span>
           <span class="arr">→</span>
-          <span class="tok to"><i style="background:#3b205a"></i><code>Cosmic Canvas #3b205a</code></span>
+          <span class="tok to"><i style="background:#4b006c"></i><code>Cosmic Canvas #4b006c</code></span>
+        </div>
+      </div>
+
+      <div class="change">
+        <div class="what">Sidebar / panel<small>sideBar.background · panel.background</small></div>
+        <div class="flow">
+          <span class="tok"><i style="background:#361b54"></i><code>old Sidebar #361b54</code></span>
+          <span class="arr">→</span>
+          <span class="tok to"><i style="background:#520075"></i><code>Sidebar #520075</code></span>
+        </div>
+      </div>
+
+      <div class="change">
+        <div class="what">Buttons / list selection<small>button.background · list.activeSelectionBackground</small></div>
+        <div class="flow">
+          <span class="tok"><i style="background:#8743a5"></i><code>Royal #8743a5</code></span>
+          <span class="arr">→</span>
+          <span class="tok to"><i style="background:#7f00b8"></i><code>Royal Select #7f00b8</code></span>
         </div>
       </div>
 
@@ -343,7 +361,7 @@
 
     </div>
     <p style="color:var(--fg-faint);font-size:.82rem;font-weight:300;margin-top:16px">
-      Active &amp; inactive tabs now share Cosmic Canvas — the active tab is told apart by its Royal Hover text plus the lilac underline. All title-bar and tab changes are <strong>Dark-variant only</strong>; the Light variant is untouched.
+      Active &amp; inactive tabs <em>and</em> both title bars now share Cosmic Canvas <code>#4b006c</code> — the active tab is told apart by its Royal Hover text plus the lilac underline. All title-bar, tab, sidebar, and button changes are <strong>Dark-variant only</strong>; the Light variant is untouched.
     </p>
   </div>
 </section>
@@ -451,38 +469,38 @@
     </div>
 
     <!-- DARK MOCK -->
-    <div class="editor" id="mock-dark" style="background:#3b205a;color:#fff">
-      <div class="ed-title" style="background:#1f152a;color:#cccccc;border-bottom:1px solid #c895df32">
-        <span class="ed-dots"><i style="background:#f55b7f"></i><i style="background:#e8a96d"></i><i style="background:#61EA5F"></i></span>
+    <div class="editor" id="mock-dark" style="background:#4b006c;color:#fff">
+      <div class="ed-title" style="background:#4b006c;color:#cccccc;border-bottom:1px solid #c895df32">
+        <span class="ed-dots"><i style="background:#f55b7f"></i><i style="background:#f5a960"></i><i style="background:#57f455"></i></span>
         space-purple — orbit.ts
       </div>
       <div class="ed-body">
-        <div class="ed-activity" style="background:#3b205a;color:#ffffff;border-right:1px solid #c895df18">
+        <div class="ed-activity" style="background:#4b006c;color:#ffffff;border-right:1px solid #c895df18">
           <span style="color:#c895df">▤</span><span style="opacity:.5">⌕</span><span style="opacity:.5">⑂</span><span style="opacity:.5">▷</span>
         </div>
-        <div class="ed-side" style="background:#361b54;color:#cccccc">
+        <div class="ed-side" style="background:#520075;color:#cccccc">
           <div class="sh">Explorer</div>
           <div class="it" style="color:#c895df">▾ SRC</div>
-          <div class="it sel" style="background:#8888883a;color:#c895df">&nbsp;&nbsp;orbit.ts</div>
+          <div class="it sel" style="background:#7f00b8;color:#c895df">&nbsp;&nbsp;orbit.ts</div>
           <div class="it">&nbsp;&nbsp;planet.ts</div>
           <div class="it">&nbsp;&nbsp;index.ts</div>
         </div>
-        <div class="ed-code" style="background:#3b205a">
-<div><span class="ln" style="color:#858585">1</span><span class="cmt" style="color:#5ed59d">// Cyberspace Purple Drip — a tiny tour of the palette</span></div>
-<div><span class="ln" style="color:#858585">2</span><span style="color:#d561c3">import</span> <span style="color:#fff">{ </span><span style="color:#fff">Vector</span><span style="color:#fff"> } </span><span style="color:#d561c3">from</span> <span style="color:#61EA5F">"./math"</span><span style="color:#fff">;</span></div>
+        <div class="ed-code" style="background:#4b006c">
+<div><span class="ln" style="color:#858585">1</span><span class="cmt" style="color:#4fe49e">// Cyberspace Purple Drip — a tiny tour of the palette</span></div>
+<div><span class="ln" style="color:#858585">2</span><span style="color:#e353cd">import</span> <span style="color:#fff">{ </span><span style="color:#fff">Vector</span><span style="color:#fff"> } </span><span style="color:#e353cd">from</span> <span style="color:#57f455">"./math"</span><span style="color:#fff">;</span></div>
 <div><span class="ln" style="color:#858585">3</span></div>
-<div><span class="ln" style="color:#858585">4</span><span style="color:#d561c3">const</span> <span style="color:#e8a96d">G</span> <span style="color:#7e9fde">=</span> <span style="color:#e8a96d">6.674e-11</span><span style="color:#fff">;</span></div>
+<div><span class="ln" style="color:#858585">4</span><span style="color:#e353cd">const</span> <span style="color:#f5a960">G</span> <span style="color:#729bea">=</span> <span style="color:#f5a960">6.674e-11</span><span style="color:#fff">;</span></div>
 <div><span class="ln" style="color:#858585">5</span></div>
-<div><span class="ln" style="color:#858585">6</span><span style="color:#d561c3">export class</span> <span style="color:#ffa600">Orbit</span> <span style="color:#d561c3">extends</span> <span style="color:#ffa600">Body</span> <span style="color:#fff">{</span></div>
-<div><span class="ln" style="color:#858585">7</span>&nbsp;&nbsp;<span style="color:#fff">radius</span><span style="color:#fff">:</span> <span style="color:#ffa600">number</span> <span style="color:#7e9fde">=</span> <span style="color:#e8a96d">42</span><span style="color:#fff">;</span></div>
+<div><span class="ln" style="color:#858585">6</span><span style="color:#e353cd">export class</span> <span style="color:#f0a10f">Orbit</span> <span style="color:#e353cd">extends</span> <span style="color:#f0a10f">Body</span> <span style="color:#fff">{</span></div>
+<div><span class="ln" style="color:#858585">7</span>&nbsp;&nbsp;<span style="color:#fff">radius</span><span style="color:#fff">:</span> <span style="color:#f0a10f">number</span> <span style="color:#729bea">=</span> <span style="color:#f5a960">42</span><span style="color:#fff">;</span></div>
 <div><span class="ln" style="color:#858585">8</span></div>
-<div><span class="ln" style="color:#858585">9</span>&nbsp;&nbsp;<span style="color:#AA52D9">pull</span><span style="color:#fff">(</span><span style="color:#fff">mass</span><span style="color:#fff">) {</span></div>
-<div><span class="ln" style="color:#858585">10</span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#d561c3">return</span> <span style="color:#fff">mass </span><span style="color:#7e9fde">*</span><span style="color:#fff"> G </span><span style="color:#7e9fde">/</span> <span style="color:#AA52D9">Math</span><span style="color:#fff">.</span><span style="color:#a2d952">pow</span><span style="color:#fff">(</span><span style="color:#fff">this</span><span style="color:#fff">.radius, </span><span style="color:#e8a96d">2</span><span style="color:#fff">);</span></div>
+<div><span class="ln" style="color:#858585">9</span>&nbsp;&nbsp;<span style="color:#ca72ec">pull</span><span style="color:#fff">(</span><span style="color:#fff">mass</span><span style="color:#fff">) {</span></div>
+<div><span class="ln" style="color:#858585">10</span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#e353cd">return</span> <span style="color:#fff">mass </span><span style="color:#729bea">*</span><span style="color:#fff"> G </span><span style="color:#729bea">/</span> <span style="color:#ca72ec">Math</span><span style="color:#fff">.</span><span style="color:#a5ea41">pow</span><span style="color:#fff">(</span><span style="color:#fff">this</span><span style="color:#fff">.radius, </span><span style="color:#f5a960">2</span><span style="color:#fff">);</span></div>
 <div><span class="ln" style="color:#858585">11</span>&nbsp;&nbsp;<span style="color:#fff">}</span></div>
 <div><span class="ln" style="color:#858585">12</span><span style="color:#fff">}</span></div>
         </div>
       </div>
-      <div class="ed-status" style="background:#3b205a;color:#ffffff;border-top:1px solid #c895df32">
+      <div class="ed-status" style="background:#4b006c;color:#ffffff;border-top:1px solid #c895df32">
         <span style="color:#c895df">⑂ master</span><span>TypeScript</span><span style="margin-left:auto;color:#c895df">Cyberspace Purple Drip Dark</span>
       </div>
     </div>
@@ -563,7 +581,7 @@
     <div class="quirk">
       <span class="q">🎚️</span>
       <div><h4>The dark file has more syntax detail</h4>
-        <p>Dark uses extra C#-specific colors (<code>#B1E4EE</code> locals/properties, <code>#68BDCE</code> fields) that the light file collapses into its red variable color. Dark is the more carefully tuned variant — the README even notes Light is still being updated.</p></div>
+        <p>The old C#-only Ice <code>#B1E4EE</code> / Cyan <code>#68BDCE</code> locals and fields are gone — those scopes now share the same Amber / White / Rose set as everything else. Light still collapses more of that into its red variable color. Dark remains the more carefully tuned variant — the README even notes Light is still being updated.</p></div>
     </div>
     <div class="quirk">
       <span class="q">🟦</span>
@@ -573,7 +591,7 @@
     <div class="quirk">
       <span class="q">🔁</span>
       <div><h4>Two purples do the talking</h4>
-        <p>Functions use <code>#AA52D9</code> while keywords use <code>#d561c3</code> — close cousins that are easy to confuse at a glance. A few near-duplicates also appear (<code>#B352D9</code>, <code>#B95FDF</code>) for specific Rust/string-punctuation scopes.</p></div>
+        <p>Functions use <code>#ca72ec</code> while keywords use <code>#e353cd</code> — close cousins that are easy to confuse at a glance. Rust's <code>support.function.std</code> is a near-duplicate at <code>#d272ec</code>.</p></div>
     </div>
   </div>
 </section>
@@ -596,12 +614,14 @@ const DARK = {
     tag:'"colors"',
     note:"Surfaces, from the deepest void to the violet editor canvas.",
     items:[
-      ["#1f152a","Void","<b>No longer used in this build</b> — it was the active title bar before being swapped to Cosmic Canvas. Currently unreferenced in the dark theme.",1],
+      ["#1f152a","Void","<b>No longer used in this build</b> — original active title bar. Currently unreferenced in the dark theme.",1],
+      ["#3b205a","Old Cosmic Canvas","<b>No longer used in this build</b> — previous main canvas before the hex moved to #4b006c.",1],
+      ["#2f1849","Nebula Surface","<b>No longer used in this build</b> — was elevated surfaces and the inactive title bar.",1],
+      ["#361b54","Old Sidebar","<b>No longer used in this build</b> — previous sidebar / explorer background.",1],
       ["#150824","Abyss","Peek-view editor gutter — near-black accents."],
       ["#1f0b36","Peek","Peek-view editor background."],
-      ["#2f1849","Nebula Surface","Elevated surfaces: widgets, menus, suggest/hover popups, debug toolbar, peek results. <b>This build also assigns it to the inactive title bar</b> (and it's no longer the active tab).",1],
-      ["#361b54","Sidebar","Sidebar / explorer background."],
-      ["#3b205a","Cosmic Canvas","THE main background: editor, panels, status bar, terminal, tabs, activity bar. <b>This build also uses it for the active title bar and the active tab</b>.",1],
+      ["#520075","Sidebar","Sidebar / explorer / panel background.",1],
+      ["#4b006c","Cosmic Canvas","THE main background: editor, status bar, terminal, tabs, activity bar, both title bars, widgets, menus, notifications.",1],
       ["#311b4b","Drop","List & sidebar drag-drop background."],
     ]
   },
@@ -610,8 +630,10 @@ const DARK = {
     tag:'"colors"',
     note:"The signature lilac and its supporting purples — interaction, focus & emphasis.",
     items:[
-      ["#c895df","Signature Lilac","★ The hero accent: cursor, badges, active line number, scrollbar slider, progress bar, links, breadcrumbs, indent guides, bracket match, borders."],
-      ["#8743a5","Royal","Buttons, active list selection, 'no folder' status bar, terminal cursor, breadcrumb active."],
+      ["#c895df","Signature Lilac","★ The hero accent: cursor, active line number, progress bar, links, breadcrumbs, indent guides, bracket match, borders."],
+      ["#7f00b8","Royal Select","Buttons and active / inactive list selection.",1],
+      ["#9900de","Badge Violet","Activity-bar badge, badges, and scrollbar slider.",1],
+      ["#8743a5","Royal","Still used for the 'no folder' / remote status bar and a few leftover chrome bits — no longer the button fill."],
       ["#be60e8","Royal Hover","Primary button hover state — and <b>this build's active-tab text</b>.",1],
       ["#9c60b8","List Hover","Hovered row in lists/trees."],
       ["#8c619f","Muted Violet","Editor text selection tint & secondary button."],
@@ -636,19 +658,17 @@ const DARK = {
     tag:'"tokenColors" + "semanticTokenColors"',
     note:"Foreground colors mapped to code tokens across 25+ languages.",
     items:[
-      ["#d561c3","Orchid","Keywords, storage, control flow, selectors, string interpolation, compound/C operators, italic emphasis. The dominant keyword color."],
-      ["#AA52D9","Amethyst","Function & method names (entity.name.function), console functions."],
+      ["#e353cd","Orchid","Keywords, storage, control flow, selectors, string interpolation, compound/C operators, italic emphasis. The dominant keyword color.",1],
+      ["#ca72ec","Amethyst","Function & method names (entity.name.function), console functions.",1],
       ["#f55b7f","Rose","HTML tags, headings, units, embedded interpolation, C++/Java/PHP function defs, JSON property names, magic/self vars."],
-      ["#ffa600","Amber","Classes, types, namespaces, modules, inherited classes, language variables — and semantic variable.defaultLibrary."],
-      ["#e8a96d","Sand","Constants, numeric literals, attributes, bold markup, CSS values, Python parameters — and semantic variable.constant."],
-      ["#a2d952","Lime","Methods & special-methods, function calls, import keyword, info tokens, attribute IDs, markdown link titles, diff headers."],
-      ["#61EA5F","Signal Green","Strings."],
-      ["#5ed59d","Mint","Comments & block quotes (italic)."],
-      ["#7e9fde","Periwinkle","Operators (logical/bitwise/arithmetic/comparison), support functions, regex, escapes, DOM types — and semantic enumMember."],
-      ["#dfb8f0","Lavender Ink","Template literals, inline raw markdown (code), JSON string values, INI text, Groovy inheritance."],
+      ["#f0a10f","Amber","Classes, types, namespaces, modules, inherited classes, language variables — and semantic variable.defaultLibrary.",1],
+      ["#f5a960","Sand","Constants, numeric literals, attributes, bold markup, CSS values, Python parameters — and semantic variable.constant.",1],
+      ["#a5ea41","Lime","Methods & special-methods, function calls, import keyword, info tokens, attribute IDs, markdown link titles, diff headers.",1],
+      ["#57f455","Signal Green","Strings.",1],
+      ["#4fe49e","Mint","Comments & block quotes (italic).",1],
+      ["#729bea","Periwinkle","Operators (logical/bitwise/arithmetic/comparison), support functions, regex, escapes, DOM types — and semantic enumMember.",1],
+      ["#e2b1f7","Lavender Ink","Template literals, inline raw markdown (code), JSON string values, INI text, Groovy inheritance.",1],
       ["#ffffff","White","Plain variables, punctuation, parameters, normal text."],
-      ["#B1E4EE","Ice","C# local & property variables."],
-      ["#68BDCE","Cyan","C# field variables."],
       ["#f44747","Error Red","Error tokens & illegal non-null typehints."],
     ]
   }
